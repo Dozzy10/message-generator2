@@ -1,6 +1,5 @@
 // --- Motivational Message Generator ---
 
-// Different sets of random data
 const greetings = [
   "Hey champion!",
   "Hello superstar!",
@@ -25,13 +24,45 @@ const advice = [
   "take the risk — you owe it to your future self."
 ];
 
+// ASCII art 
+const asciiArt = [
+  `
+  ⭐⭐⭐⭐⭐
+     YOU GOT THIS!
+  ⭐⭐⭐⭐⭐
+  `,
+  `
+   (•‿•)
+  /|   |\\
+   |   |
+  / \\ / \\
+  Keep Smiling!
+  `,
+  `
+  ╔═══╗────────╔╗
+  ║╔═╗║────────║║
+  ║║─╚╬══╦═╗╔══╣║╔══╗
+  ║║╔═╣╔╗║╔╗╣╔╗║║║║═╣
+  ║╚╩═║╔╗║║║║╔╗║╚╣║═╣
+  ╚═══╩╝╚╩╝╚╩╝╚╩═╩══╝
+  Believe!
+  `,
+  `
+    ✨
+   ( ͡❛ ͜ʖ ͡❛)
+   <)  )╯ STAY STRONG
+    /  \\
+  `
+];
+
 // Generate a random message
 function generateMessage() {
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
   const mood = moods[Math.floor(Math.random() * moods.length)];
   const tip = advice[Math.floor(Math.random() * advice.length)];
+  const art = asciiArt[Math.floor(Math.random() * asciiArt.length)];
 
-  return `${greeting} You're feeling ${mood}. Remember to ${tip}`;
+  return `${greeting} You're feeling ${mood}. Remember to ${tip}\n${art}`;
 }
 
 // Output the message
