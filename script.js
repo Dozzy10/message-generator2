@@ -1,4 +1,4 @@
-// --- Motivational Message Generator ---
+// Motivational Message Generator 
 
 const greetings = [
   "Hey champion!",
